@@ -1,0 +1,23 @@
+{
+  "brokers": [
+    {
+      "broker": "zerodha",
+      "selected": false,
+      "clientID": "dummy",
+      "appKey": "dummy",
+      "appSecret": "dummy",
+      "redirectUrl": "http://localhost:8080/apis/broker/login/zerodha"
+    },
+    {
+      "broker": "aliceblue",
+      "selected": true,
+      "clientID": 1073144,
+      "pwd": "IamAlice@123",
+      "twofa": 1991,
+      "tOtpKey": "VUGIMYNLFSUQGPFRPJBNFPKHQVSBXQKG",
+      "apiKey": "Oyv6QAfOv1qbJOyHJm2IZ7ePHbNIuWcokFPM1zB5aW63Gx4iTWFNCnuiul4ZpqLEikXvgxVI51TCCv8ci4dM3sVI9CvjIpJWOyHebmN5c4eXPR1q7uAr65bezjbsiQot",
+      "tgBotToken": "6762655149:AAEaHcOm-k9X36y4Tu1p6bK-fGln61nMNTg",
+      "apiBaseURL": "https://ant.aliceblueonline.com/rest/AliceBlueAPIService"
+    }
+  ]
+}

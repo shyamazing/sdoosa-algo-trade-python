@@ -1,10 +1,14 @@
-
-
 class BrokerAppDetails:
   def __init__(self, broker):
     self.broker = broker
     self.appKey = None
     self.appSecret = None
+    self.pwd = None
+    self.twofa = None
+    self.totpKey = None
+    self.apiKey = None
+    self.tgBotToken = None
+    self.apiBaseURL = None
 
   def setClientID(self, clientID):
     self.clientID = clientID
@@ -15,3 +19,20 @@ class BrokerAppDetails:
   def setAppSecret(self, appSecret):
     self.appSecret = appSecret
 
+  def setPwd(self, pwd):
+    self.pwd = pwd
+
+  def setTwoFa(self, twofa):
+    self.twofa = twofa
+
+  def setTotpKey(self, totpKey):
+    self.totpKey = totpKey
+
+  def setApiKey(self, apiKey):
+    self.apiKey = apiKey
+
+  def setTgBotToken(self, tgBotToken):
+    self.tgBotToken = tgBotToken
+
+  def setApiBaseURL(self, apiBaseURL):
+    self.apiBaseURL = apiBaseURL

@@ -3,6 +3,7 @@ import logging
 from config.Config import getBrokerAppConfig
 from models.BrokerAppDetails import BrokerAppDetails
 from loginmgmt.ZerodhaLogin import ZerodhaLogin
+from loginmgmt.AliceblueLogin import AliceblueLogin
 
 class Controller:
   brokerLogin = None # static variable
@@ -13,16 +14,20 @@ class Controller:
 
     brokerAppDetails = BrokerAppDetails(brokerAppConfig['broker'])
     brokerAppDetails.setClientID(brokerAppConfig['clientID'])
-    brokerAppDetails.setAppKey(brokerAppConfig['appKey'])
-    brokerAppDetails.setAppSecret(brokerAppConfig['appSecret'])
+    
+    brokerAppDetails.setPwd(brokerAppConfig['pwd'])
+    brokerAppDetails.setTwoFa(brokerAppConfig['twofa'])
+    brokerAppDetails.setTotpKey(brokerAppConfig['tOtpKey'])
+    brokerAppDetails.setApiKey(brokerAppConfig['apiKey'])
+    brokerAppDetails.setTgBotToken(brokerAppConfig['tgBotToken'])
+    brokerAppDetails.setApiBaseURL(brokerAppConfig['apiBaseURL'])
 
     logging.info('handleBrokerLogin appKey %s', brokerAppDetails.appKey)
     Controller.brokerName = brokerAppDetails.broker
     if Controller.brokerName == 'zerodha':
       Controller.brokerLogin = ZerodhaLogin(brokerAppDetails)
-    # Other brokers - not implemented
-    #elif Controller.brokerName == 'fyers':
-      #Controller.brokerLogin = FyersLogin(brokerAppDetails)
+    elif Controller.brokerName == 'aliceblue':
+      Controller.brokerLogin = AliceblueLogin(brokerAppDetails)
 
     redirectUrl = Controller.brokerLogin.login(args)
     return redirectUrl

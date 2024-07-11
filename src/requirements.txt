@@ -1,0 +1,5 @@
+Flask
+KiteConnect
+pya3
+pyotp
+pycryptodome
