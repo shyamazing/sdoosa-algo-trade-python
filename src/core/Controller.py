@@ -20,7 +20,8 @@ class Controller:
     brokerAppDetails.setTotpKey(brokerAppConfig['tOtpKey'])
     brokerAppDetails.setApiKey(brokerAppConfig['apiKey'])
     brokerAppDetails.setTgBotToken(brokerAppConfig['tgBotToken'])
-    brokerAppDetails.setApiBaseURL(brokerAppConfig['apiBaseURL'])
+    brokerAppDetails.setApiBaseUrl(brokerAppConfig['apiBaseUrl'])
+    brokerAppDetails.setWebLoginUrl(brokerAppConfig['webLoginUrl'])
 
     logging.info('handleBrokerLogin appKey %s', brokerAppDetails.appKey)
     Controller.brokerName = brokerAppDetails.broker

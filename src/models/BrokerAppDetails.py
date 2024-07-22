@@ -1,38 +1,43 @@
 class BrokerAppDetails:
-  def __init__(self, broker):
-    self.broker = broker
-    self.appKey = None
-    self.appSecret = None
-    self.pwd = None
-    self.twofa = None
-    self.totpKey = None
-    self.apiKey = None
-    self.tgBotToken = None
-    self.apiBaseURL = None
 
-  def setClientID(self, clientID):
-    self.clientID = clientID
+    def __init__(self, broker):
+        self.broker = broker
+        self.appKey = None
+        self.appSecret = None
+        self.pwd = None
+        self.twofa = None
+        self.totpKey = None
+        self.apiKey = None
+        self.tgBotToken = None
+        self.apiBaseUrl = None
+        self.webLoginUrl = None
 
-  def setAppKey(self, appKey):
-    self.appKey = appKey
+    def setClientID(self, clientID):
+        self.clientID = clientID
 
-  def setAppSecret(self, appSecret):
-    self.appSecret = appSecret
+    def setAppKey(self, appKey):
+        self.appKey = appKey
 
-  def setPwd(self, pwd):
-    self.pwd = pwd
+    def setAppSecret(self, appSecret):
+        self.appSecret = appSecret
 
-  def setTwoFa(self, twofa):
-    self.twofa = twofa
+    def setPwd(self, pwd):
+        self.pwd = pwd
 
-  def setTotpKey(self, totpKey):
-    self.totpKey = totpKey
+    def setTwoFa(self, twofa):
+        self.twofa = twofa
 
-  def setApiKey(self, apiKey):
-    self.apiKey = apiKey
+    def setTotpKey(self, totpKey):
+        self.totpKey = totpKey
 
-  def setTgBotToken(self, tgBotToken):
-    self.tgBotToken = tgBotToken
+    def setApiKey(self, apiKey):
+        self.apiKey = apiKey
 
-  def setApiBaseURL(self, apiBaseURL):
-    self.apiBaseURL = apiBaseURL
+    def setTgBotToken(self, tgBotToken):
+        self.tgBotToken = tgBotToken
+
+    def setApiBaseUrl(self, apiBaseUrl):
+        self.apiBaseUrl = apiBaseUrl
+
+    def setWebLoginUrl(self, webLoginUrl):
+        self.webLoginUrl = webLoginUrl
